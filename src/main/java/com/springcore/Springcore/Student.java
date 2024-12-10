@@ -1,9 +1,13 @@
 package com.springcore.Springcore;
 
+import java.util.Properties;
+
 public class Student {
 	private int studentId;
 	private String studentName;
 	private String studentAddress;
+	private Properties prop;
+	
 	public int getStudentId() {
 		return studentId;
 	}
@@ -24,22 +28,42 @@ public class Student {
 	}
 	
 	
-	public Student(int studentId, String studentName, String studentAddress) {
+	
+	public Properties getProp() {
+		return prop;
+	}
+	public void setProp(Properties prop) {
+		this.prop = prop;
+	}
+//	public Student(int studentId, String studentName, String studentAddress) {
+//		super();
+//		this.studentId = studentId;
+//		this.studentName = studentName;
+//		this.studentAddress = studentAddress;
+//	}
+	
+	public Student(int studentId, String studentName, String studentAddress, Properties prop) {
 		super();
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.studentAddress = studentAddress;
+		this.prop = prop;
 	}
-	
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+//	@Override
+//	public String toString() {
+//		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentAddress=" + studentAddress
+//				+ "]";
+//	}
 	@Override
 	public String toString() {
 		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentAddress=" + studentAddress
-				+ "]";
+				+ ", prop=" + prop + "]";
 	}
+	
 	
 	
 

@@ -7,7 +7,7 @@
            https://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/context
            https://www.springframework.org/schema/context/spring-context.xsd">
-     <!-- First Bean -->      
+     <!--       
 	<bean class="com.springcore.Springcore.Student" name="student1">
 		<property name="studentId" value="12345" />
 			
@@ -22,7 +22,7 @@
 		</property>
 	</bean>
 	
-	<!-- second bean  -->
+	second bean 
 	<bean class="com.springcore.Springcore.Student" name="student2">
 		<property name="studentId" value="221134" />
 			
@@ -37,8 +37,18 @@
 		</property>
 	</bean>
 	
-	<!-- Using P schema for create bean object -->
-	<!--<bean class="com.springcore.Springcore.Student" name="student3" p:studentId="55231" p:studentName="Aditya Kumar" p:studentAddress="haryana"  />-->
-
+	Using P schema for create bean object
+	<bean class="com.springcore.Springcore.Student" name="student3" p:studentId="55231" p:studentName="Aditya Kumar" p:studentAddress="haryana"  />
+ -->
+ 
+ <bean class="com.springcore.ref.B" name="bref">
+ 	<property name="y" value="86"/>
+ </bean>
+ 
+ <bean class="com.springcore.ref.A" name="aref">
+ 	<property name="x" value="88"/>
+	<!-- <property name="obj"> <ref bean="bref"/> </property> -->
+	<property name="obj" ref="bref"/>
+ </bean>
 </beans>
 	
